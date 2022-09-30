@@ -17,6 +17,7 @@ def test_basc_tkinter():
     root.geometry(loc)
 
     #图标
+    root.iconbitmap('./logo.ico')
 
 
     root.mainloop()

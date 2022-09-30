@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import Image,ImageTk
+from tkinter.ttk import Separator
 
 
 num = 100
@@ -37,13 +38,23 @@ def test_basc_tkinter():
                   font=('Helvetic',20,'bold'),
                   cursor='heart'
                   )
+    label.pack(padx=0, pady=10)
+
+    sep = Separator(root,orient=HORIZONTAL)
+    sep.pack(fill=X,padx=1)
+    print("Separator  -",sep.keys())
+
     label2 = Label(root,bitmap='hourglass',text='my sky is blue',compound='top',relief='solid',
                    padx=10,pady=5)
+    label2.pack()
 
     label3 = Label(root,width=10,height=1,text='1',bg='#8712e7')
     digit_count(label3)
-    label.pack()
-    label2.pack()
+    #输入控件label所有标签属性
+    print(label3.keys())
+
+
+
     label3.pack()
 
 
